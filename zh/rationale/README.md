@@ -31,5 +31,7 @@ Julia 显然也就是为了弥补这个空档而设计的。它使得编写如C 
 - 它有内置且简单的并行于并发能力，在今日及未来的CPU 多核世界也将大有所为。
 
 此前，多数研究人员以及语言设计者都认为把这些集成到了一个环境里不可能，但是Julia 做到了。
+
+
 [^TC]: Technical Computing
 [^LLVM JIT]: Low Level Virtual Machine Just in Time
