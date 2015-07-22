@@ -11,10 +11,24 @@ Julia 没有静态编译的步骤。机器码都是实时由基于LLVM[^LLVM]的
 实际上，Julia 有一动态类型系统，因此代码中声明变量的类型也就不那么必要。虽说不必，但也可当注释、提升代码可维护性，甚至有时可帮助编译器优化执行过程。这种可选类型的原则，跟Dart 也是一致的。与传统动态语言类似，无类型这一点极具效用，而无类型的Julia 运行起来又有静态编译语言的速度。
 Julia 将通用编程和多态编程推向极致：算法写一次之后便可应用于多种类型。这提供的灵活性，适用于多种即使差异很大的类型。例如：`size` 就是一个有50 种实际实现的通用函数。一个叫做“动态多分”[^DMD]的系统，能高效地从几十种函数定义中选择最适用于当前参数的结果。 基于变量实际的类型，Julia 会选择并生成确切且有效地机器码，因此其类型系统让Julia 近乎可以与原始的机器操作并驾齐驱。
 
+## 附注
+
+总之，这种基于数据流的类型推断，自然产生了选择特定执行代码的“动态多分”。
+
+然而，大家还是得牢记，Julia 的类型并未收到强制的静态检查。运行的时候也会出现类型错误，因此测试也就是必须的了。而对于在编程界给Julia 分类的问题，实际上它实现了多种编程范式：过程式、函数式、元编程、面向对象[^OO]（虽然也不是完全的面向对象）。虽然它不像Java、Ruby、C# 这一类纯对象型的语言，但它的类型系统提供了非常强大的继承机制。数值及其他类型的转换、值提升[^NP]优雅、友好且迅捷。而用户定义的类型也如内置类型般迅速和紧凑。函数编程方面，Julia 让无副作用的纯函数编程变得易如反掌；而在数学中，函数就是第一类对象[^FCO]。
+
+Julia 也支持多进程。基于消息传递，它可以让程序在本地或远端能够多进程的运行。基于任意模型的分布式程序，也就又能并行化的可能。
+
+Julia 也如Python 一样适合通用编程。它也有与时俱进的如Perl 等语言的字符串处理（Unicode 支持）和正则表达式支持。此外，它也能如shell 一样编程，将其他程序或线程的执行串连在一起。
+
+Julia 有自身语言编写的标准库，有内置的基于GitHub 的包管理（名叫**Metadata** ）。包管理也能让Julia 与稳步发展的外部库/包保持一致。它也是跨平台的，支持32位和64位的GNU/Linux、Darwin/OSX、Windows和FreeBSD等系统。
 
 [^LLVM]: Low Level Virtual Machine
 [^JIT]: JIT Compiler
 [^TI]: Type Information
-[^DMD]: Dynamic MultipLe Dispath
+[^DMD]: Dynamic MultipLe Dispatch
+[^OO]: Object Oriented
+[^FCO]: First-class Objects
+[^NP]: Promotion. 通常如Numeric Promotion，比如1×5.0 会转成1.0×5.0，所以第一个整形就promoted 成浮点型了。
 
 <script type="text/javascript" src="http://www.josephjctang.com/assets/js/analytics.js" defer="defer"></script>
