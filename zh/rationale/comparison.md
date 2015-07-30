@@ -12,9 +12,16 @@
 
 ## Python
 
+跟Python 对比，Julia 也有10 倍到30 倍的性能优势。然而，Julia 把如Python 的代码编译成机器码，并获得如C 的性能。此外，你也可以使用如后的包在Julia 中调用Python 函数`PyCall`[^PyCall]
 
+因为上述语言中有大量的现存库，对于注重实践的数据科学家来说，如果实际问题需要，他们还是希望能混编Julia 和其他语言如R、Python 的。
+
+Julia 也能应用与数据分析和大数据，因为这些都涉及预测分析、问题建模。这些问题通常都可归约为线性代数算法、图形分析技术，而这些也是Julia 擅长的。
+
+在高性能计算领域，对Julia 这样的语言已是虚位以待。领域专家使用Julia 可以快速并轻便地实验、描述问题，而使用高性能计算跟使用PC 机一样。换言之，一门能让用户快速上手而不必细究底层机器架构的编程语言，正是这个领域非常欢迎的。
 
 <script type="text/javascript" src="http://www.josephjctang.com/assets/js/analytics.js" defer="defer"></script>
 
 [^MATLAB.jl]: [https://github.com/JuliaLang/MATLAB.jl](https://github.com/JuliaLang/MATLAB.jl)
 [^Rif.jl]: [https://github.com/lgautier/Rif.jl](https://github.com/lgautier/Rif.jl)
+[^PyCall]: [https://github.com/stevengj/PyCall.jl](https://github.com/stevengj/PyCall.jl)
