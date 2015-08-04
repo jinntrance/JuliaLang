@@ -1,0 +1,23 @@
+{
+  "githubId": "jinntrance/JuliaBook",
+  "author": {
+    "username": "jinntrance",
+    "name": "Joseph Jin-Chuan Tang",
+    "urls.profile": "http://profile.josephjctang.com",
+    "accounts.github": "jinntrance"
+  },
+  "gitbook": ">=2.2.0",
+  "language": "zh",
+  "plugins": ["mathjax", "ga", "baidu"],
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-39438576-1"
+    },
+    "baidu": {
+      "token": "11224c4b3c0923fa6de6e431325fe387"
+    }
+  },
+  "variables": {
+    "profile_site": "http://profile.josephjctang.com"
+  }
+}
