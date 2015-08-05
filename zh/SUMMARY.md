@@ -4,5 +4,3 @@
     * [对比其他数据科学家使用的语言](rationale/comparison.md)
     * [有用的资源](rationale/links.md)
     * [小结](rationale/summary.md)
-    
-<script type="text/javascript" src="http://www.josephjctang.com/assets/js/analytics.js" defer="defer"></script>
