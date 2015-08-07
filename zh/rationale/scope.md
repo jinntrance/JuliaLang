@@ -26,5 +26,3 @@ Julia 显然也就是为了弥补这个空档而设计的。它使得编写如C 
 
 [^TC]: Technical Computing
 [^LLVM JIT]: Low Level Virtual Machine Just in Time
-
-<script type="text/javascript" src="http://www.josephjctang.com/assets/js/analytics.js" defer="defer"></script>

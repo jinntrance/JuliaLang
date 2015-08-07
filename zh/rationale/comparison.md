@@ -20,7 +20,6 @@ Julia 也能应用与数据分析和大数据，因为这些都涉及预测分�
 
 在高性能计算领域，对Julia 这样的语言已是虚位以待。领域专家使用Julia 可以快速并轻便地实验、描述问题，而使用高性能计算跟使用PC 机一样。换言之，一门能让用户快速上手而不必细究底层机器架构的编程语言，正是这个领域非常欢迎的。
 
-<script type="text/javascript" src="http://www.josephjctang.com/assets/js/analytics.js" defer="defer"></script>
 
 [^MATLAB.jl]: [https://github.com/JuliaLang/MATLAB.jl](https://github.com/JuliaLang/MATLAB.jl)
 [^Rif.jl]: [https://github.com/lgautier/Rif.jl](https://github.com/lgautier/Rif.jl)
