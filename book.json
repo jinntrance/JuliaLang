@@ -19,9 +19,5 @@
   },
   "variables": {
     "profile_site": "http://profile.josephjctang.com"
-  },
-  "styles": {
-    "website": "styles/website.css",
-    "ebook": "styles/ebook.css"
   }
 }
