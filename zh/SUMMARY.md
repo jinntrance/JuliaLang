@@ -4,3 +4,5 @@
     * [对比其他数据科学家使用的语言](rationale/comparison.md)
     * [有用的资源](rationale/links.md)
     * [小结](rationale/summary.md)
+- [安装Julia 环境](ch1/install.md)
+
