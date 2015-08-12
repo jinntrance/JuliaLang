@@ -29,4 +29,4 @@ Julia 有自身语言编写的标准库，有内置的基于GitHub 的包管理�
 [^DMD]: Dynamic MultipLe Dispatch
 [^OO]: Object Oriented
 [^FCO]: First-class Objects
-[^NP]: Promotion. 通常如Numeric Promotion，比如1×5.0 会转成1.0×5.0，所以第一个整形就promoted 成浮点型了。
+[^NP]: Promotion. 通常如Numeric Promotion，比如1×5.0 会转成1.0×5.0，所以第一个整型就promoted 成浮点型了。
