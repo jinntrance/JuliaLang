@@ -17,4 +17,50 @@ Julia 的类型是可选的。换言之，就是用户可以选择是否对函�
 
 后续你也将在Julia 的 REPL[^REPL] 中尝试给出的样例代码进行学习。
 
+## 变量、命名规则、注释
+
+数据都是以诸如`1`、`3.14`、`"Julia"` 的值存储的。而每个值都有一个类型。比如3.14 的类型是`Float64`。其他基本类型及例子就如：`Int64` 类型的42，`Bool` 类型的 `true` 和 `false`，还有`Char` 类型的 `'X'`。
+
+与当今其他语言不同，Julia 的单字符跟字符串是不同的。字符串可包含任意数量的字符，并且用双引号引起来；而单引号则仅仅用于字符。变量，就是被赋予一个确切值（数值和字符串）后的改值的一个名称。比如`x = 42`。变量包含该值的类型；这个类型是由`typeof` 这个函数确定的。比如`typeof(x)` 的结果就是`Int64`。
+
+变量的类型是可变的，比如`x = "I am Julia"` ，`typeof(x)` 返回的类型就是 `ASCIIString` 了。Julia 中，不必像C 或 Java 中那样声明变量（以表征其类型），但每一个变量必须被初始化（也就是绑定某个确切的值），如此Julia 便能推断其类型了。
+
+```julia
+julia> y = 7
+7
+julia> typeof(y)
+Int64
+julia> y + z
+ERROR: z not defined
+```
+
+上述例子中，z 使用前未被初始化，故而报错。将变量与操作符（比如上例中的`+`）、函数组合使用，就得到表达式了。表达式总会在计算后产生新值。与其他语言不同，Julia 中一切皆是表达式，所以每次都会返回值。这也是使用REPL 中的乐事，因为每一步都能看到结果。
+
+变量类型决定了你能对该变量做哪些操作，也就限制了你对该变量能使用的操作符，从这个意义上讲Julia 就是一种强类型语。言。后面这个例子，x 仍然是`String` 类型，所以不能与还是Int64 类型的y 求和。但一旦我们给x 赋值一个浮点数，那么我们就可以求和了：
+
+```julia
+julia> x + y
+ERROR: `+` has no method matching +(::ASCIIString, ::Int64)
+julia> x = 3.5; x + y
+10.5
+```
+其中，`;` 英文分号表示前面表达式结束并不打印结果。
+
+变量名区分大小写的。一般来说，使用小写字母；长变量名可用下划线连接多个词。变量名首个字符使用字母；然后其余字符就可使用数字及下划线了。当然也可使用Unicode 字符。命名时最好使用明了、言简意赅的名字。如后便是几个规范的变量名：`mass, moon_velocity, current_time, pos3, and ω1`。但是最后两个变量名表意不明，若替换成如后两名更好：`particle_position, particle_ang_velocity`
+
+以井号`#` 开头的每行代码都为注释，如后例子:
+
+```julia
+# Calculate the gravitational acceleration grav_acc: 
+gc = 6.67e-11 
+# gravitational constant in m3/ kg s2
+mass_earth = 5.98e24 # in kg 
+radius_earth = 6378100 # in m 
+grav_acc = gc * mass_earth / radius_earth ^ 2 # 9.8049 m/ s2
+```
+
+多行注释在实际中，对于写成多行的说明以及暂时注释多行代码都是有用的。Julia 中使用 `#=` `=#` 对与包含在其中的多行进行注释。
+
+
+
 [^REPL]:  read–eval–print loop 即交互式的终端
