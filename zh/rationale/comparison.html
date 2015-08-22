@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>对比其他数据科学家使用的语言 | 浅尝Julia 编程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="author" content="[object Object]">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../rationale/links.html" />
+    
+    
+    <link rel="prev" href="../rationale/place.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.3" data-basepath=".." data-revision="Sat Aug 22 2015 23:04:55 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="輸入並搜尋" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介紹
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="rationale/index.html">
+            
+                
+                    <a href="../rationale/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Julia 的理论基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="rationale/scope.html">
+            
+                
+                    <a href="../rationale/scope.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Julia 的适用范围
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="rationale/place.html">
+            
+                
+                    <a href="../rationale/place.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Julia 在其他编程语言中的地位
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="rationale/comparison.html">
+            
+                
+                    <a href="../rationale/comparison.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        对比其他数据科学家使用的语言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="rationale/links.html">
+            
+                
+                    <a href="../rationale/links.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        有用的资源
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="rationale/summary.html">
+            
+                
+                    <a href="../rationale/summary.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch1/install.html">
+            
+                
+                    <a href="../ch1/install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        安装Julia 环境
+                    </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                本書使用 GitBook 釋出
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="目錄"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="搜尋"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="字型設定"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">襯線體</button>
+        <button type="button" data-font="1" class="button">無襯線體</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">白色</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">棕褐色</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">夜間</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="分享"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    分享到 Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    分享到 Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    分享到 Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    分享到 Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    分享到 Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >浅尝Julia 编程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%AF%B9%E6%AF%94%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%B6%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AF%AD%E8%A8%80">&#x5BF9;&#x6BD4;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x5BB6;&#x4F7F;&#x7528;&#x7684;&#x8BED;&#x8A00;</h1>
+<p>&#x56E0;&#x4E3A;&#x901F;&#x5EA6;&#x4E5F;&#x662F;Julia &#x7684;&#x5236;&#x80DC;&#x6CD5;&#x5B9D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x7684;Benchmark &#x5BF9;&#x6BD4;&#x4E5F;&#x653E;&#x5728;&#x4E86;Julia <a href="http://julialang.org" target="_blank">&#x5B98;&#x7F51;</a>&#x5F88;&#x660E;&#x663E;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x4E0A;&#x9762;&#x5C55;&#x793A;&#x4E86;C&#x3001;Fortran&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x901A;&#x5E38;&#x90FD;&#x5728;&#x4F18;&#x5316;&#x8FC7;&#x7684;C &#x4EE3;&#x7801;&#x6027;&#x80FD;&#x7684;2&#x500D;&#x4EE5;&#x5185;&#xFF0C;&#x8FD9;&#x4E5F;&#x4E5F;&#x628A;&#x5176;&#x4ED6;&#x4F20;&#x7EDF;&#x7684;&#x52A8;&#x6001;&#x8BED;&#x8A00;&#x7529;&#x4E86;&#x4E00;&#x6761;&#x8857;&#x3002;&#x8BBE;&#x8BA1;Julia &#x7684;&#x4E00;&#x4E2A;&#x660E;&#x786E;&#x76EE;&#x6807;&#x5C31;&#x662F;&#xFF0C;&#x80FD;&#x6709;&#x8DB3;&#x591F;&#x597D;&#x7684;&#x6027;&#x80FD;&#x4EE5;&#x4E0D;&#x5FC5;&#x56DE;&#x9000;&#x5230;C &#x8BED;&#x8A00;&#x3002;&#x8FD9;&#x4E0E;&#x5982;&#x540E;&#x7684;&#x60C5;&#x51B5;&#x5C31;&#x5F62;&#x6210;&#x9C9C;&#x660E;&#x5BF9;&#x6BD4;&#xFF1A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E0B;&#xFF08;&#x5C31;&#x7B97;&#x5728;NumPy &#x4E2D;&#xFF09;&#xFF0C;&#x4E0D;&#x5F97;&#x4E0D;&#x4F7F;&#x7528;C &#x6765;&#x83B7;&#x53D6;&#x8FC7;&#x5F97;&#x53BB;&#x7684;&#x6027;&#x80FD;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6280;&#x672F;&#x8BA1;&#x7B97;&#x65B0;&#x65F6;&#x4EE3;&#x7684;&#x5230;&#x6765;&#x6307;&#x65E5;&#x53EF;&#x5F85;&#xFF0C;&#x800C;&#x76F8;&#x5173;&#x5E93;&#x6587;&#x4EF6;&#x4E5F;&#x80FD;&#x7528;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x800C;&#x975E;C&#x6216;Fortran &#x8FD9;&#x79CD;&#x3002;Julia &#x4E5F;&#x7279;&#x522B;&#x80FD;&#x8DD1;MATLAB &#x548C;R &#x6837;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C31;&#x8BE6;&#x7EC6;&#x5BF9;&#x6BD4;&#x5BF9;&#x6BD4;&#x3002;</p>
+<h2 id="matlab">MATLAB</h2>
+<p>&#x5BF9;MATLAB &#x7528;&#x6237;&#x6765;&#x8BF4;&#xFF0C;Julia &#x4E4D;&#x770B;&#x5C31;&#x5F88;&#x50CF;&#xFF1B;Julia &#x53E5;&#x6CD5;&#x4E0E;MATLAB &#x672C;&#x6765;&#x5C31;&#x5F88;&#x76F8;&#x4F3C;&#xFF0C;&#x53EA;&#x662F;Julia &#x9762;&#x5411;&#x8DDF;&#x901A;&#x7528;&#x7684;&#x7F16;&#x7A0B;&#x800C;&#x5DF2;&#x3002;Julia &#x4E2D;&#x7684;&#x5F88;&#x591A;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x4E5F;&#x80FD;&#x8DDF;MATLAB/Octave &#x5BF9;&#x5E94;&#x4E0A;&#xFF08;&#x800C;&#x8DDF;R &#x91CC;&#x7684;&#x51FD;&#x6570;&#x540D;&#x5374;&#x5BF9;&#x4E0D;&#x4E0A;&#xFF09;&#xFF1B;&#x4F46;&#x662F;&#x5E95;&#x5C42;&#x8BA1;&#x7B97;&#x5B9E;&#x73B0;&#x5374;&#x5927;&#x76F8;&#x5F84;&#x5EAD;&#x3002;MATLAB &#x4F20;&#x7EDF;&#x4E0A;&#x6240;&#x5E94;&#x7528;&#x7684;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x9886;&#x57DF;&#xFF0C;Julia &#x4E5F;&#x6709;&#x540C;&#x7B49;&#x7684;&#x5E94;&#x7528;&#x7A7A;&#x95F4;&#x548C;&#x5E94;&#x7528;&#x80FD;&#x529B;&#xFF1B;&#x7136;&#x800C;&#xFF0C;Julia &#x4E0D;&#x4F1A;&#x8BA9;&#x4F60;&#x56E0;&#x7248;&#x6743;&#x8D39;&#x800C;&#x5927;&#x4F24;&#x8111;&#x7B4B;&#x3002;&#x6B64;&#x5916;&#xFF0C;Benchmark &#x7ED3;&#x679C;&#x8868;&#x660E;Julia &#x5728;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x64CD;&#x4F5C;&#x4E0A;&#xFF0C;&#x901F;&#x5EA6;&#x662F;MATLAB/Octave &#x7684;10 &#x5230; 1000 &#x500D;&#x3002;Julia &#x4E5F;&#x5411;MATLAB &#x7F16;&#x7A0B;&#x63D0;&#x4F9B;&#x4E86;&#x63A5;&#x53E3;&#x5305;<code>MATLAB.jl</code><sup><a href="#fn_MATLAB.jl" id="reffn_MATLAB.jl">MATLAB.jl</a></sup></p>
+<h2 id="r">R</h2>
+<p>&#x6B64;&#x524D;&#xFF0C;R &#x662F;&#x7EDF;&#x8BA1;&#x9886;&#x57DF;&#x5907;&#x53D7;&#x63A8;&#x5D07;&#x7684;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#x3002;&#x800C;&#x73B0;&#x5728;Julia &#x4E5F;&#x4E1A;&#x5DF2;&#x8BC1;&#x660E;&#x4E86;&#x5982;R &#x4E00;&#x6837;&#x9002;&#x7528;&#x4E8E;&#x8BE5;&#x9886;&#x57DF;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x6709;10 &#x500D;&#x5230;1000 &#x500D;&#x7684;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x3002;&#x5728;MATLAB &#x4E2D;&#x505A;&#x7EDF;&#x8BA1;&#x548C;&#x5728;R &#x4E2D;&#x505A;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x540C;&#x6837;&#x8BA9;&#x4EBA;&#x6293;&#x72C2;&#xFF0C;&#x4F46;Julia &#x5374;&#x80FD;&#x8F7B;&#x677E;&#x73A9;&#x8F6C;&#x6B64;&#x4E24;&#x79CD;&#x3002;Julia &#x6BD4;&#x57FA;&#x4E8E;&#x5411;&#x91CF;&#x7C7B;&#x578B;&#x7684;R &#x6709;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;&#x3002;&#x4E00;&#x4E9B;&#x7EDF;&#x8BA1;&#x4E13;&#x5BB6;&#x5982; <em>Douglas Bates</em> &#x4E5F;&#x5F3A;&#x70C8;&#x652F;&#x6301;&#x5E76;&#x63A8;&#x5D07;Julia&#x3002;Julia &#x4E5F;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7ED9;R &#x8BED;&#x8A00;&#xFF1A;<code>Rif.jl</code><sup><a href="#fn_Rif.jl" id="reffn_Rif.jl">Rif.jl</a></sup></p>
+<h2 id="python">Python</h2>
+<p>&#x8DDF;Python &#x5BF9;&#x6BD4;&#xFF0C;Julia &#x4E5F;&#x6709;10 &#x500D;&#x5230;30 &#x500D;&#x7684;&#x6027;&#x80FD;&#x4F18;&#x52BF;&#x3002;&#x7136;&#x800C;&#xFF0C;Julia &#x628A;&#x5982;Python &#x7684;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;&#x6210;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x5E76;&#x83B7;&#x5F97;&#x5982;C &#x7684;&#x6027;&#x80FD;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x540E;&#x7684;&#x5305;&#x5728;Julia &#x4E2D;&#x8C03;&#x7528;Python &#x51FD;&#x6570;<code>PyCall</code><sup><a href="#fn_PyCall" id="reffn_PyCall">PyCall</a></sup></p>
+<p>&#x56E0;&#x4E3A;&#x4E0A;&#x8FF0;&#x8BED;&#x8A00;&#x4E2D;&#x6709;&#x5927;&#x91CF;&#x7684;&#x73B0;&#x5B58;&#x5E93;&#xFF0C;&#x5BF9;&#x4E8E;&#x6CE8;&#x91CD;&#x5B9E;&#x8DF5;&#x7684;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x5BB6;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x5B9E;&#x9645;&#x95EE;&#x9898;&#x9700;&#x8981;&#xFF0C;&#x4ED6;&#x4EEC;&#x8FD8;&#x662F;&#x5E0C;&#x671B;&#x80FD;&#x6DF7;&#x7F16;Julia &#x548C;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x5982;R&#x3001;Python &#x7684;&#x3002;</p>
+<p>Julia &#x4E5F;&#x80FD;&#x5E94;&#x7528;&#x4E0E;&#x6570;&#x636E;&#x5206;&#x6790;&#x548C;&#x5927;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x90FD;&#x6D89;&#x53CA;&#x9884;&#x6D4B;&#x5206;&#x6790;&#x3001;&#x95EE;&#x9898;&#x5EFA;&#x6A21;&#x3002;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x901A;&#x5E38;&#x90FD;&#x53EF;&#x5F52;&#x7EA6;&#x4E3A;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x7B97;&#x6CD5;&#x3001;&#x56FE;&#x5F62;&#x5206;&#x6790;&#x6280;&#x672F;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x4E5F;&#x662F;Julia &#x64C5;&#x957F;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x9AD8;&#x6027;&#x80FD;&#x8BA1;&#x7B97;&#x9886;&#x57DF;&#xFF0C;&#x5BF9;Julia &#x8FD9;&#x6837;&#x7684;&#x8BED;&#x8A00;&#x5DF2;&#x662F;&#x865A;&#x4F4D;&#x4EE5;&#x5F85;&#x3002;&#x9886;&#x57DF;&#x4E13;&#x5BB6;&#x4F7F;&#x7528;Julia &#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5E76;&#x8F7B;&#x4FBF;&#x5730;&#x5B9E;&#x9A8C;&#x3001;&#x63CF;&#x8FF0;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x4F7F;&#x7528;&#x9AD8;&#x6027;&#x80FD;&#x8BA1;&#x7B97;&#x8DDF;&#x4F7F;&#x7528;PC &#x673A;&#x4E00;&#x6837;&#x3002;&#x6362;&#x8A00;&#x4E4B;&#xFF0C;&#x4E00;&#x95E8;&#x80FD;&#x8BA9;&#x7528;&#x6237;&#x5FEB;&#x901F;&#x4E0A;&#x624B;&#x800C;&#x4E0D;&#x5FC5;&#x7EC6;&#x7A76;&#x5E95;&#x5C42;&#x673A;&#x5668;&#x67B6;&#x6784;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x6B63;&#x662F;&#x8FD9;&#x4E2A;&#x9886;&#x57DF;&#x975E;&#x5E38;&#x6B22;&#x8FCE;&#x7684;&#x3002;</p>
+<blockquote id="fn_MATLAB.jl">
+<sup>MATLAB.jl</sup>. <a href="https://github.com/JuliaLang/MATLAB.jl" target="_blank">https://github.com/JuliaLang/MATLAB.jl</a><a href="#reffn_MATLAB.jl" title="Jump back to footnote [MATLAB.jl] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_Rif.jl">
+<sup>Rif.jl</sup>. <a href="https://github.com/lgautier/Rif.jl" target="_blank">https://github.com/lgautier/Rif.jl</a><a href="#reffn_Rif.jl" title="Jump back to footnote [Rif.jl] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_PyCall">
+<sup>PyCall</sup>. <a href="https://github.com/stevengj/PyCall.jl" target="_blank">https://github.com/stevengj/PyCall.jl</a><a href="#reffn_PyCall" title="Jump back to footnote [PyCall] in the text."> &#x21A9;</a>
+</blockquote>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../rationale/place.html" class="navigation navigation-prev " aria-label="Previous page: Julia 在其他编程语言中的地位"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../rationale/links.html" class="navigation navigation-next " aria-label="Next page: 有用的资源"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-baidu/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-39438576-1","configuration":"auto"},"baidu":{"token":"11224c4b3c0923fa6de6e431325fe387"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-39438576-1', 'auto');ga('send', 'pageview');</script>
+<script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?11224c4b3c0923fa6de6e431325fe387';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
+    </body>
+    
+</html>
