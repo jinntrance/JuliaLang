@@ -69,6 +69,8 @@ julia> print(x)
 
 处理复杂类型的变量时，常用到“对象”（抑或“实例”）。但是，实际上对象实施操作时，Julia 使用的是函数式的方式。例如会使用`action(object)` 而非`object.action()`，这与其他面向如Java、C# 这种面向对应的语言很是不同。
 
+REPL 中，在每一行命令没有`;` 作为结束符号的情况下，执行结束后，最后一个表达式的值就会自动显示。而在单独的脚本中，Julia 只会在脚本显式声明打印（亦即使用`print` 和`println`）的时候才会显示内容；若要像REPL 中那样显示一个对象，就需要显示声明`display(object)` 。
+
 
 
 [^REPL]:  read–eval–print loop 即交互式的终端
