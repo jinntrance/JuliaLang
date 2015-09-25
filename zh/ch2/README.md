@@ -71,25 +71,6 @@ julia> print(x)
 
 REPL 中，在每一行命令没有`;` 作为结束符号的情况下，执行结束后，最后一个表达式的值就会自动显示。而在单独的脚本中，Julia 只会在脚本显式声明打印（亦即使用`print` 和`println`）的时候才会显示内容；若要像REPL 中那样显示一个对象，就需要显示声明`display(object)` 。
 
-## 类型
 
-Julia 类型系统首屈一指。Julia 多数时间像Python 一样是动态类型的。例如一个变量先前是赋值整型，后来可以赋值浮点型。如后：
-
-```julia
-julia> x = 10
-10
-julia> x = "hello"
-"hello"
-```
-然而，也可选择把类型定义加到变量声明的地方；如此此变量就只可被重新赋值为同类型的值。譬如，声明`x::ASCIIString` 就是说只能将字符串赋值给x；一般形式就是`var::TypeName`。这种显示声明，通常也被用着限制函数参数的具体类型。并且额外的类型信息，可当作注释，也可让即时编译器产生优化得更好的机器码；并且这样也能让开发环境提供更好的支持，譬如代码工具中也可以检查代码是否存在类型错误。
-
-如后便是一个简单的例子：`calc_position(time::Float64)` 便表示该函数只接受Float64 类型的参数。
-
-Julia 使用同样的语法，用于检查变量或表达式的确切类型。譬如当`(expr)::TypeName` 中的expr 类型与后面TypeName 不匹配时便会抛错。例如：
-
-```julia
-julia> (2+3)::ASCIIString
-ERROR: type: typeassert: expected ASCIIString, got Int64
-```
 
 [^REPL]:  read–eval–print loop 即交互式的终端

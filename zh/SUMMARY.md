@@ -6,4 +6,5 @@
     * [小结](rationale/summary.md)
 - [安装Julia 环境](ch1/install.md)
 - [变量、类型与基本运算](ch2/README.md)
+    * [类型](ch/types.md)
 
