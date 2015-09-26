@@ -8,13 +8,17 @@
   },
   "gitbook": ">=2.4.3",
   "language": "zh",
-  "plugins": ["ga", "baidu", "katex"],
+  "plugins": ["ga", "baidu", "katex", "duoshuo"],
   "pluginsConfig": {
     "ga": {
       "token": "UA-39438576-1"
     },
     "baidu": {
       "token": "11224c4b3c0923fa6de6e431325fe387"
+    },
+    "duoshuo": {
+        "short_name": "jinntrance",
+        "theme": "default"
     }
   },
   "variables": {
