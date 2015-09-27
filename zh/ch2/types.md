@@ -1,4 +1,4 @@
-# 类型
+## 类型
 
 Julia 类型系统首屈一指。Julia 多数时间像Python 一样是动态类型的。例如一个变量先前是赋值整型，后来可以赋值浮点型。如后：
 
@@ -100,7 +100,6 @@ a, b = b,a ＃现在a为4和b为3
 - `a || b` 中，a 若为true 则b 不被计算
 
 而操作符号`&` `|` ，也可用于逻辑判断，但不作短路优化。
-
 Julia 还支持整数的位运算。其中 ，整数n 在Julia 不存在如后的操作：`n++` 或 `n--`；虽然在C++ 或Java 可如此使用，但Julia 使用 `n += 1` 或 `n -= 1` 来代替。
 
 有关操作的更详细的信息，如位运算，特殊优先级等等，参见[Julia 数学运算](http://docs.julialang.org/en/latest/manual/mathematical-operations/)。
@@ -127,7 +126,7 @@ Unicode字符可以用带有`\U`的前缀，而后4个（或8个）十六进制�
 
 文字串始终是ASCII（如果它们只包含ASCII 字符） 或 UTF8（如果它们包含非ASCII 字符）中的两种类型，如在本例中：
 
-```
+```julia
 julia> typeof("hello")
 ASCIIString (constructor with 2 methods)
 julia> typeof("习大大")
@@ -136,7 +135,7 @@ UTF8String (constructor with 2 methods)
 
 UTF16 和 UTF32 也支持的。字符串是包含在双引号`" "` 或 三引号`''' '''`中的。字符串是不可变的，意即它们一旦被就不能被改变：
 
-```
+```julia
 julia> s = "Hello Julia"
 "Hello Julia"
 julia> s[2] = 'z'
@@ -147,7 +146,7 @@ ERROR: `setindex!` has no method matching setindex!(::ASCIIString, ::Char, ::Int
 
 使用越界索引（小于-1，或大于最后一个字符的索引值）就会报错 BoundsError。一般情况下，字符串可以包含Unicode字符（单字符可能多达四个字节），所以不是每一个索引都是合理的。例如，
 
-```
+```julia
 julia> str2="我是陈欧，我为自己带盐"
 "我是陈欧，我为自己带盐"
 julia> str2[1]
@@ -175,7 +174,7 @@ Julia 在构建字符串时，有一个优雅的字符串插入替换机制：�
 
 连接字符串也可用运算符`*`或使用`string()` 函数：`"abc" * "def"` 和 `string("abc","def")` 返回的结果都是`"abcdef"`。
 
-字符串加上前缀`:`就编程了`Symbol`类型， 如`:green` ; 我们已经在`print_with_color` 函数中用过。它们比字符串更有效，并用于ID或键（keys）。符号不能被连接起来。它们只用于程序执行过程中的常量。字符串类型定义的函数非常丰富，有354 个之多，并且可通过形如`methodswith(String)` 调用。一些有用的函数如后：
+字符串加上前缀`:`就变成了`Symbol`类型， 如`:green` ; 我们已经在`print_with_color` 函数中用过。它们比字符串更有效，并用于ID或键（keys）。符号不能被连接起来。它们只用于程序执行过程中的常量。字符串类型定义的函数非常丰富，有354 个之多，并且可通过形如`methodswith(String)` 调用。一些有用的函数如后：
 
 - `search(string, char)`： 返回字符串中第一个匹配上的字符的索引 ，如`search("Julia", 'l')` 返回3。
 - `replace(string, str1, str2)`：将string 字符串中的str1 替换为str2，例如，`replace("Julia", "u", "o")` 返回`"Jolia"`。
@@ -185,7 +184,7 @@ Julia 在构建字符串时，有一个优雅的字符串插入替换机制：�
 
 该`@printf` 宏（我们会在[第7章](../ch7/) *Julia 中的元编程* 深入研究宏 ）在格式化中，会用到指定格式的一个*格式字符串*，一个（或多个）待格式化的变量。它的工作原理类似于C 语言的`printf`。同时，用户可以在*格式字符串*中使用变量占位符 。例如：
 
-```
+```julia
 julia> name = "Pascal"
 "Pascal"
 julia> @printf("Hello, %s \n", name)
@@ -196,7 +195,7 @@ Hello, Pascal
 
 下面的脚本显示了最常见的格式（ `show`是打印对象的文本表示基本函数，往往比`print` 更具体）：
 
-```
+```julia
 # d for integers: 
 @printf("%d\n", 1e5) #> 100000 
 x = 7.35679 # f = float format, rounded if needed:
@@ -233,7 +232,7 @@ I like Julia
 
 一种特殊的字符串是形如`v"0.3.0"`（注意前面的v，及双引号中的其他详细信息） 的`VersionNumber`。这类字符串可以相互比较，它们不仅用于Julia 的版本，还用于`Pkg` 的包版本和依赖（[第1章](../ch1/)*安装Julia 环境*的包管理部分 ）。如果你需要针对不同版本定制化代码，可参照如下例子：
 
-```
+```julia
 if v"0.3" < = VERSION < v"0.4-"
     # do something specific to 0.3 release series 
 end

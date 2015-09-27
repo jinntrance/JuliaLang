@@ -4,7 +4,9 @@
     * [对比其他数据科学家使用的语言](rationale/comparison.md)
     * [有用的资源](rationale/links.md)
     * [小结](rationale/summary.md)
-- [安装Julia 环境](ch1/install.md)
+- [安装Julia 环境](ch1/README.md)
 - [变量、类型与基本运算](ch2/README.md)
-    * [类型](ch2/types.md)
+    * [基本类型](ch2/types.md)
+    * [复杂类型及运算](ch2/advanced_types.md)
+  
 
