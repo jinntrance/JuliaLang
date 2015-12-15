@@ -308,5 +308,14 @@ println("Time elapsed: $time_elapsed")
 
 当用Julia 且想获得更多不只是大于等于0.3 的特性，可参见`Dates` 包。使用`Pkg.add("Dates")` 即可将其加入环境变量（ 这也将提供了`Dates` 模块文本相关的功能）。也有奎因·琼斯提供的`Time` 包。欲知详情，参见该文档[[https://github.com/quinnj/Datetime.jl/wiki/Datetime-Manual]]。
 
-从朱莉娅版本0.4开始，您应该使用 日期 模块内置于标准库，与 日期 的天， 日期时间 为次下降到毫秒。其他时区的功能可以通过 Timezones.jl 包 添加 。
+从Julia 0.4以后，使用内置于标准库`Dates` 模块：`Date` 用于日期， `DateTime` 用于精确到毫秒的时间。其他时区的功能可以通过 `Timezones.jl` 包添加。
+
+`Date` 和`DateTime` 相关特性也可如下形式构建，或用只能获取更少信息的简版：
+
+```
+d = Date(2014,9,1) 返回 2014-09-01
+dt = DateTime(2014,9,1,12,30,59,1) 返回 2014-09-01T12:30:59.001
+```
+
+这些对象可以被比较，求差以得到的时间间隔。日期相关的属性可以通过访问函数获取，如 `Dates.year(d), Dates.month(d), Dates.week(d),  Dates.day(d)`。其他有用的函数如：如`ayofweek, dayname, daysinmonth, dayofyear, isleapyear`等等。
 
