@@ -325,6 +325,18 @@ dt = DateTime(2014,9,1,12,30,59,1) 返回 2014-09-01T12:30:59.001
 
 所以，限制一个变量的范围到局部最好。这可以通过将变量定义在函数或控制结构内部来完成，我们将在下面的章节中看到例子。如此，我们便能多次使用相同的变量名而不会产生名称冲突。
 
+如后代码：
 
+```
+x = 1.0 # x is Float64
+x = 1 # now x is Int
+# y::Float64 = 1.0 # LoadError: "y is not defined"
+function scopetest()
+    println(x) # 1, x is known here, because it's in global scope
+    y::Float64 = 1.0 # y must be Float64, this is not possible in global scope
+end
+scopetest()
+println(y) #> ERROR: y not defined, only defined in scope of scopetest()
+```
 
 
