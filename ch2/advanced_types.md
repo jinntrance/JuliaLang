@@ -339,4 +339,4 @@ scopetest()
 println(y) #> ERROR: y not defined, only defined in scope of scopetest()
 ```
 
-
+变量`x` 改变了它的类型，这是编译器允许的。但因为它使代码的类型不固定，也就可能产生性能问题。从第三行`y` 的定义中可以看到，类型注释仅仅可用在局部范围内（这里，在 `scopetest()`函数）。
