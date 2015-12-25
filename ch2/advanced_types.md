@@ -376,3 +376,6 @@ x = (a = 5; 2 * a)
 ```
 const GC = 6.67e-11 # gravitational constant in m3/kg s2
 ```
+
+Julia 定义了好些常量，比如`ARGS`（包含命令行参数的一个数组），`VERSION`（Julia 的版本），以及`OS_NAME`（操作系统名如Linux，Windows或Darwin），数学常数（如 `pi`和`e`）和日期时间常数（如``Friday, Fri, August, Aug`）。
+
