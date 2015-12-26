@@ -379,3 +379,14 @@ const GC = 6.67e-11 # gravitational constant in m3/kg s2
 
 Julia 定义了好些常量，比如`ARGS`（包含命令行参数的一个数组），`VERSION`（Julia 的版本），以及`OS_NAME`（操作系统名如Linux，Windows或Darwin），数学常数（如 `pi`和`e`）和日期时间常数（如``Friday, Fri, August, Aug`）。
 
+如果你试图给一个全局常量赋予一个新的值，你会收到编译器的警告；但如果你改变它的类型，你会被提示出现错误，如下 所示：
+
+```
+julia> GC = 3.14
+      Warning: redefining constant GC
+julia> GC = 10
+      ERROR: invalid redefinition of constant GC
+``` 
+
+常量只能赋值一次，并且它们的类型也不能改变，因此它们在VM 层面能被优化。如此，尽情的在全局范围内使用全局变量吧。
+
