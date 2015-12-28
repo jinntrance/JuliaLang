@@ -400,3 +400,5 @@ julia> ARR = [1, 2, 3]
   Warning: redefining constant ARR
 ``` 
 
+回顾一下本章习得，我们把玩了字符、字符串以及数组，基本如后续代码（`strings_arrays.jl`）：
+
