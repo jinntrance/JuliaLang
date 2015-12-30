@@ -437,3 +437,9 @@ println(nstr) # The Gold and Red Loses a Bit of Its Luster
 println("arrays: calculate sum, mean and standard deviation ")
 ```
 
+
+
+## 摘要
+
+本章中，我们熟悉了Julia 的一些基本要素，如常量，变量和类型。我们还学习了如何使用基本类型，如数字、字符、字符串、范围以及非常灵活的数组类型。在下一章中，我们将深入函数的特性。大家也将发现，Julia 不愧是一个函数式语言。
+
