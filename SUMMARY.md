@@ -8,5 +8,6 @@
 - [变量、类型与基本运算](ch2/README.md)
     * [基本类型](ch2/types.md)
     * [复杂类型及运算](ch2/advanced_types.md)
+- [函数](ch3/README.md)
   
 
