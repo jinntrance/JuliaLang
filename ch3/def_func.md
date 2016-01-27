@@ -85,4 +85,6 @@ insert_elem(arr)
 
 显示声明参数类型以限制调用时传递参数的类型，也是有用的举措。对浮点数函数头​​便可如后定义：`mult(x::Float64, y::Float64)`。当我们如此`mult(5, 6)` 调用该函数就将得到一个错误。`ERROR: *mult* has no method matching mult(::Int64, ::Int64)`。如此不难看出Julia 确实是一门强类型语言。浮点参数的函数不接受的整型参数。
 
+如果我们定义函数时不声明参数类型，它是通用的;Julia 的JIT编译器随时待命按需生成适应不同参数类型的函数版本（又称作`methods`）。如前定义的`mult`函数，在REPL你将看到` mult (generic function with 1 method)`。
+
 
