@@ -9,5 +9,6 @@
     * [基本类型](ch2/types.md)
     * [复杂类型及运算](ch2/advanced_types.md)
 - [函数](ch3/README.md)
+    * [函数定义](ch3/def_func.md)
   
 
