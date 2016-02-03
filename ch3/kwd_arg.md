@@ -14,6 +14,8 @@ f(a, b = 5) = a + b
 k(x; a1 = 1, a2 = 2) = x * (a1 + a2)
 ```
 
+现在`k(3, a2 = 3)`返回 12，`k(3, a2 = 3, a1 = 0)` 返回9（ 所以他们的位置并不重要），但`k(3) `返回 9（证明该命名参数是可选）。一般而言，可选的位置参数和命名参数可以做如下组合：
+
 
 [^OPA]: optional positional arguments
 [^OKA]: optional keyword arguments
