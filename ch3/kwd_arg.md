@@ -30,6 +30,15 @@ end
 normal arg: 1 - optional arg: 3 - keyword arg: 4
 ```
 
+一个有用的例子是，当命名参数省略简写如下：
+
+```julia
+function varargs2(;args...)
+    args
+end
+```
+
+调用`varargs2(k1="name1", k2="name2", k3=7)` 将返回一个`Array{Any,1}` 类型的三元素数组的元素 ：`(:k1,"name1") (:k2,"name2") (:k3,7)`。现在，args 是键值对的一个列表，其中每个key 来自于命名参数对应的名称的集合，同时它也是一个以冒号`:`作前缀的符号（参照[第二章](../ch2/) 的字符串、变量、类型和基本运算）。
 
 
 [^OPA]: optional positional arguments
