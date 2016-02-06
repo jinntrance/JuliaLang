@@ -10,5 +10,6 @@
     * [复杂类型及运算](ch2/advanced_types.md)
 - [函数](ch3/README.md)
     * [函数定义](ch3/def_func.md)
+    * [可选参数及命名参数](ch3/kwd_arg.md)
   
 
