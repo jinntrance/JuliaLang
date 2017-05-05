@@ -11,5 +11,6 @@
 - [函数](ch3/README.md)
     * [函数定义](ch3/def_func.md)
     * [可选参数及命名参数](ch3/kwd_arg.md)
-  
+    * [匿名函数](ch3/anonyous_function.md)
+    * [高阶函数与闭包](ch3/1st_class_function.md)
 
